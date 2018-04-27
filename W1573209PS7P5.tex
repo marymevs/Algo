@@ -1,0 +1,64 @@
+\documentclass[10pt]{article}
+
+% DO NOT EDIT THE LINES BETWEEN THE TWO LONG HORIZONTAL LINES
+
+%---------------------------------------------------------------------------------------------------------
+
+% Packages add extra functionality.
+\usepackage{times,graphicx,epstopdf,fancyhdr,amsfonts,amsthm,amsmath,algorithm,algorithmic,xspace,hyperref}
+\usepackage[left=1in,top=1in,right=1in,bottom=1in]{geometry}
+\usepackage{sect sty}	%For centering section headings
+\usepackage{enumerate}	%Allows more labeling options for enumerate environments 
+\usepackage{epsfig}
+\usepackage[space]{grffile}
+
+% This will set LaTeX to look for figures in the same directory as the .tex file
+\graphicspath{.} %The dot means current directory.
+
+\pagestyle{fancy}
+
+\lhead{\WilliamsID}
+\chead{Problem Set \PSNumber \ --- Problem \ProblemNumber}
+\rhead{\today}
+\lfoot{CSci 256: Algorithm Design}
+\cfoot{\thepage}
+\rfoot{Spring 2018}
+
+% Some commands for changing header and footer format
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headwidth}{\textwidth}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% These let you use common environments
+\newtheorem{claim}{Claim}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{observation}{Observation}
+\newtheorem{question}{Question}
+
+\setlength{\parindent}{0cm}
+
+
+%---------------------------------------------------------------------------------------------------------
+
+% DON'T CHANGE ANYTHING ABOVE HERE
+
+% Edit below as instructed
+\newcommand{\WilliamsID}{W1573209}	% Put you Williams ID in the braces
+\newcommand{\PSNumber}{7}			% Put the problem set # in the braces
+\newcommand{\ProblemNumber}{5}		% Put the problem # in the braces
+\newcommand{\ProblemHeader}{Problem \ProblemNumber}	% Don't change this
+
+\begin{document}
+
+
+\vspace{\baselineskip}	% Add some vertical space
+
+\vspace{\baselineskip}	% Add some vertical space
+\textbf{Solution}
+
+To solve this problem, we first have to show that it is in NP. Given a proposed solution to this problem, we can easily check that it is a valid sequence. So we have shown Perfect Assembly to be in NP. \newline
+Given that this is sequencing problem, we can use Hamiltonian Path to show that this problem is NP complete. Given an instance of Hamiltonian Path $G = (V,E)$ we can think of each vertex as an element S in Perfect Assembly, and each edge as a corroborating element in T. Therefore, a solution to Hamiltonian Path in which we visit each node corresponds to a valid solution for Perfect Assembly because we can only follow the path if the sequence is valid. 
+% DO NOT DELETE ANYTHING BELOW THIS LINE
+\end{document}
